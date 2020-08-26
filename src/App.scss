@@ -93,6 +93,12 @@
       }
     }
   }
+  .nav-tabs{
+    margin-bottom: 15px;
+    .nav-link{
+      font-weight: 600;
+    }
+  }
 }
 
 body{
@@ -102,4 +108,19 @@ body{
     font-family: 'Poppins' !important;
     font-size: 16px;
   }
+}
+
+// override default Bootstrap style
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link {
+  color: #E0E0E0 !important;
+  background-color: #fff !important;
+  border: none !important;
+  border-bottom: 3px solid #E0E0E0 !important;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: #64B3D5 !important;
+  background-color: #fff !important;
+  border: none !important;
+  border-bottom: 3px solid #64B3D5 !important;
 }
