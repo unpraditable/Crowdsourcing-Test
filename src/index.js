@@ -7,6 +7,8 @@ import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './fonts/NunitoSans-Regular.ttf';
+import './fonts/Poppins-Bold.ttf';
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>

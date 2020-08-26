@@ -1,4 +1,5 @@
 import React from 'react';
+import Intro from './features/Intro/Intro';
 import Users from './features/Users/Users';
 import SearchBar from './features/SearchBar/SearchBar';
 import './App.scss';
@@ -6,6 +7,7 @@ import './App.scss';
 function App() {
   return (
     <div className="App">
+        <Intro />
         <div class="col-12">
           <SearchBar />
         </div>
