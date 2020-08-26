@@ -1,5 +1,6 @@
 import React, {Component} from 'react'; 
 import axios from 'axios';
+import Skeleton from 'react-loading-skeleton';
 
 class Users extends Component {
     state = {
@@ -29,13 +30,13 @@ class Users extends Component {
                             <div className="image-container">
                                 {/* Render the image from API if there is a picture of user */}
                                 {user.picture &&
-                                    <img src={`${user.picture}`} alt={`${user.name}`} />
+                                    <img src={`${user.picture}`} alt={`${user.name}`} /> || <Skeleton duration={2} /> 
                                 }
                                 
                             </div>
                             <div className="user-card--title">
-                                <p className="name">{user.name}</p>
-                                <p className="company">{user.company}</p>
+                                <p className="name">{user.name || <Skeleton duration={2} />}</p>
+                                <p className="company">{user.company || <Skeleton duration={2} />}</p>
                             </div>
                         </li>
                     )}
