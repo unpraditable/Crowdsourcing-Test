@@ -11,9 +11,6 @@ function App() {
     <div className="App">
         <Intro />
         <div class="col-12">
-          <SearchBar />
-        </div>
-        <div class="col-12">
           <Users />
         </div>
         <div class="col-12">

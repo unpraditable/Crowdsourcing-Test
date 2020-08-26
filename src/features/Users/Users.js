@@ -4,7 +4,8 @@ import Skeleton from 'react-loading-skeleton';
 
 class Users extends Component {
     state = {
-        users: []
+        users: [],
+        searchTerm: ''
     }
 
     componentDidMount() {
@@ -16,13 +17,35 @@ class Users extends Component {
             });
         })
     }
+
+    editSearchTerm = (e) => {
+        this.setState({searchTerm: e.target.value})
+    }
+
+    dynamicSearch = () => {
+        return this.state.users.filter(name => name.toLowerCase().includes(this.state.searchTerm.toLowerCase()))
+    }
     
     render() {
 
+        var searchString = this.state.searchTerm.trim().toLowerCase();
         let users = this.state.users;
+
+        if (searchString.length > 0) {
+            users = users.filter(function(user) {
+                return user.name.toLowerCase().match( searchString );
+            });
+        }
 
         return (
             <div className="wrapper">
+
+                <input
+                    className="form-control"
+                    placeholder = "Search"
+                    onChange = {this.editSearchTerm} 
+                    value={this.state.searchTerm} 
+                />
                 {/* The Users sub component */}
                 <ul className="user-card-container list-unstyled col-12">
                     {users.map(user => 
