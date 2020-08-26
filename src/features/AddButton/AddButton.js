@@ -11,7 +11,7 @@ class AddButton extends Component {
       
         return (
             <div className="fixed-bottom">
-                <button class="btn btn-primary">Undang Bergabung</button>
+                <button class="btn btn-primary"><i className="user-icon"></i>Undang Bergabung</button>
             </div>
         )
     }
