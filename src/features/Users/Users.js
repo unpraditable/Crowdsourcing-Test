@@ -29,14 +29,11 @@ class Users extends Component {
                         <li className="user-card">
                             <div className="image-container">
                                 {/* Render the image from API if there is a picture of user */}
-                                {user.picture &&
-                                    <img src={`${user.picture}`} alt={`${user.name}`} /> || <Skeleton duration={2} /> 
-                                }
-                                
+                                    {<img src={`${user.picture}`} alt={`${user.name}`} /> || <Skeleton circle={true} />}   
                             </div>
                             <div className="user-card--title">
-                                <p className="name">{user.name || <Skeleton duration={2} />}</p>
-                                <p className="company">{user.company || <Skeleton duration={2} />}</p>
+                                <p className="name">{user.name || <Skeleton />}</p>
+                                <p className="company">{user.company || <Skeleton />}</p>
                             </div>
                         </li>
                     )}
