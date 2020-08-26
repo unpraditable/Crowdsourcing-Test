@@ -7,22 +7,15 @@ import InputGroup from 'react-bootstrap/InputGroup'
 class SearchBar extends Component {
 
     render() {
-        // var search = function (e) {
-        //     let searchQuery = document.getElementById('searchForm').value;
-        //     e.preventDefault();
-        //     window.location.href=`/search?title=${searchQuery}`;
-        // }
+        const {search, value} = this.props;
       
         return (
-            <Form inline>
-                <InputGroup  className="search-input" >
-                    <FormControl
-                    placeholder="Search..."
-                    aria-label="Search..."
-                    aria-describedby="basic-addon2" id="searchForm" required
-                    />
-                </InputGroup>
-            </Form>
+            <input
+                className="form-control"
+                placeholder = "Search"
+                onChange={(e) => search(e.target.value)}
+                value={value} 
+            />
 
         )
     }

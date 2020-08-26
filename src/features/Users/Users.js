@@ -21,7 +21,7 @@ class Users extends Component {
         let users = this.state.users;
 
         return (
-            <div className="row">
+            <div className="wrapper">
                 {/* The Users sub component */}
                 <ul className="user-card-container list-unstyled col-12">
                     {users.map(user => 
@@ -34,8 +34,8 @@ class Users extends Component {
                                 
                             </div>
                             <div className="user-card--title">
-                                <p>{user.name}</p>
-                                <p>{user.company}</p>
+                                <p className="name">{user.name}</p>
+                                <p className="company">{user.company}</p>
                             </div>
                         </li>
                     )}
